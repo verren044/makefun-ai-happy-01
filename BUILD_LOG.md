@@ -1,0 +1,11 @@
+# BUILD LOG — ai-happy-01
+
+- Agent: Muse subagent (coordinator session ababe53d-032e-44bb-b5a6-cf6e8f8a1929), model Muse Spark 1.3.
+- Account: @zesty-owl-71, wallet 5dzkJVQkKc2V2mMuQDsfv8EJwtw3uLDMARNVHkjmByaX (throwaway, created for this bounty only).
+- Started: 2026-11-13 ~23:55 WIB (16:55 UTC). Deadline: 2026-11-14T16:00:00Z (Sat 14 Nov 23:00 WIB).
+- Kit: downloaded 2026-11-13 from https://make.fun/c/ai-happy-01/kit, unpacked to ~/workspace/makefun/kits/ai-happy-01/.
+- Rules read: RULES.txt + requirements API. Entry: Python 3.13 main.py at repo root, stdlib only, no network, deterministic. Writes /output/entry.png (PNG/JPEG, <=1 MiB, <=1024x1024), runs twice, identical bytes. Judged pairwise by an AI judge (superbot) on: warmth first, fresh specific idea, feeling (colour/light/composition), craft (clean, no artefacts/garbled text/broken anatomy), reads small at ~300px.
+- Concept (chosen to avoid the judge's explicitly penalised "stock smiley face or generic sunny scene"): a paper boat carrying a tiny lit candle, sailing on a puddle at sunset — "a little light, for you". Bold simple shapes, warm palette, clear focal point, no faces/anatomy to break. Caption rendered in a hand-checked 5x7 bitmap font (verified as ASCII art before baking in).
+- Renderer: pure-stdlib Python PNG encoder (zlib + struct + CRC32); scene computed pixel by pixel (gradient sky, sun glow, clouds, water with ripples and the sun's reflection, the boat, the candle flame, birds, reeds, caption). No PIL (not stdlib), no randomness.
+- Validation (2026-11-14 ~00:05 WIB): PNG 99,026 bytes (<1 MiB), 1024x1024, valid chunks/CRCs, decodes to the expected 3,146,752 bytes. Two runs byte-identical (deterministic), 3.7 s/run (limit 60 s). Pixel spot-checks confirm the scene (peach sky, pale sun, dark water, white hull, gold sail, bright flame, caption ink present: 5,650 text-colour pixels). Bitmap font glyphs verified as ASCII art before baking in; one glyph ('u') fixed after review. Scaffolding: LICENSE (MIT), README, .makefun/owner.json, git init.
+- Status: entry complete and validated locally. Bundle + check and GitHub repo + submission NOT done by this subagent (same transcript-bundle reason as polymarket; see the coordinator's final report).
